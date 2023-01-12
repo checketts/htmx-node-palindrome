@@ -1,0 +1,9 @@
+    <div class="card" id="randomPalindromeCard" hx-swap="outerHTML" hx-target="#randomPalindromeCard">
+        <h2>Random Palindrome</h2>
+        <div class="palindrome"><%= p.text %></div>
+        <div>
+            <a style="cursor: pointer; color: blue;" hx-get="/random" >See another random palindrome</a><br>
+            <button hx-post="/votes/<%= p.normalized %>" title="Vote up!">Up vote: <span ><%= p.votes %></span></button>
+        </div>
+
+    </div>

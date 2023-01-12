@@ -1,0 +1,11 @@
+            <div th:class="${#fields.hasErrors('form.palindromeText')}? error" hx-target="this" >
+                <label for="palindromeText">Text:</label>
+                <input id="palindromeText" name="palindromeText" value="<%= form.palindromeText %>" hx-post="/palindromes" />
+                <ul >
+<% for( var i = 0; i < errors.palindromeText.length; i++){ 
+var err = errors.palindromeText[i]
+%>
+<li class="error"> <%= err %></li>
+<% } %>
+       </ul>
+            </div>

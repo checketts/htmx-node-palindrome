@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns:hx="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PAAS - Palidromes as a service</title>
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        .card {
+            border: #333;
+            border-radius: 4px;
+            width: 275px;
+            min-height: 200px;
+            box-shadow: 3px 3px 5px #000;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .card .palindrome {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+    <script src="https://unpkg.com/htmx.org@1.8.0"></script>
+</head>
+<body>
+<h1>PAAS : Palindromes as a Service</h1>
+<div style="display: flex; flex-direction: row; gap: 20px;">
+    <%- include('randomPalindrome.ejs') %>
+
+    <%- include('topPalindromes.ejs') %>
+
+    <%- include('addForm.ejs') %>
+</div>
+
+</body>
+
+
+</html>

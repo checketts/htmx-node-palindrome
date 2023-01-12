@@ -1,0 +1,10 @@
+    <div class="card" id="topPalindromes" hx-swap="outerHTML" hx-target="#topPalindromes">
+        <h2>Top palindromes</h2>
+        <ul hx-get="/top" hx-trigger="every 5s, voteAdded from:body">
+<% for( var i = 0; i < topPalindromes.length; i++){ 
+var pal = topPalindromes[i]
+%>
+<li><span><%= pal.text %></span> (<span><%= pal.votes %></span>)</li>
+<% } %>
+        </ul>
+    </div>

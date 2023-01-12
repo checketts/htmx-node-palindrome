@@ -1,0 +1,11 @@
+<div th:class="${#fields.hasErrors('form.submitter')}? error" hx-target="this" th:fragment="submitterField" >
+                <label for="submitter">Submitter:</label>
+                <input id="submitter" name="submitter" value="<%= form.submitter %>" hx-post="/palindromes" />
+                <ul >
+                <% for( var i = 0; i < errors.submitter.length; i++){ 
+var err = errors.submitter[i]
+%>
+<li class="error"> <%= err %></li>
+<% } %>
+                </ul>
+            </div>

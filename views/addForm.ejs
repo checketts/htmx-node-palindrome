@@ -1,0 +1,12 @@
+    <div class="card" id="addFormCard">
+        <h2>Add a palindrome</h2>
+        <%if (form.addMessage) { %>
+        <div style="color: green"><%= form.addMessage %></div>
+        <% } %>
+
+        <form hx-post="/palindromes" hx-target="#addFormCard" hx-swap="outerHTML" >
+			<%- include('palindromeText.ejs') %>
+            <%- include('submitter.ejs') %>
+            <button type="submit">Add</button>
+        </form>
+    </div>
